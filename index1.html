@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>JobFinder</title>
+
+    <!-- Bootstrap -->
+	<link rel="stylesheet" href="css/style.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  </head>
+  <body>
+   
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+<div id="mainpage">
+	<div>
+      <a class="navbar-brand" href="#">
+	  <img alt="Brand" src="images/brand.png"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li ><a href="#">Home </a></li>
+        <li><a href="#">Job Seekers</a></li>
+		<li><a href="#">Post a Job</a></li>
+		<li><a href="#">Contact Us</a></li>
+      </ul>
+      
+      <ul class="nav navbar-nav navbar-right">
+       <button type="button" class="button1">Login</button>
+	   <button type="button" class="button2">Sign up</button>
+      </ul>
+    </div>
+	<div class="wave_line">
+		<img alt="" src="images/wave.png">
+	</div>
+	<div>
+			 <h1 id="text1">DREAM JOBS<br> Waiting for you!</h1>
+	</div>
+	<div id="text2">
+			 <h4>Search and find your dream job is now easier than ever.<br> Just browse a job and apply if you need to.</h4>
+			 
+	</div>
+	<div>
+	<button type="button" class="button3"><span class="button3text">Get Started</span></button></div>
+	<div class="image_girl">
+			 <img alt="" src="images/img2.png" ALIGN="right">
+	</div>
+	<div id="rect">
+	<img alt="" src="images/Rectangle.png">
+	</div>
+	<div id="net">
+	<img alt="" src="images/net.png">
+	</div>
+	
+</div>
+<div id="mainpage2">
+	<div ><h1 id="browse">Browse Jobs By Category</h1></div>
+	<section class="loadmore">
+    <div class="container">
+    <div class="row">
+    <div class="col-xs-12 col-sm-4">
+    <div class="card">
+      <img class="card-image" src="https://images.unsplash.com/photo-1547744037-b80bdba1b6f0" />
+      <div class="card-body">
+        <h3 class="card-title">Hello World</h3>
+        <p class="card-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </div></div>
+	<div class="col-xs-12 col-sm-4">
+    <div class="card">
+      <img class="card-image" src="https://images.unsplash.com/photo-1548772981-2fded21624d9" />
+      <div class="card-body">
+        <h3 class="card-title">Card 2</h3>
+        <p class="card-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </div></div>
+	<div class="col-xs-12 col-sm-4">
+	<div class="card">
+      <img class="card-image" src="https://images.unsplash.com/photo-1547744037-b80bdba1b6f0" />
+      <div class="card-body">
+        <h3 class="card-title">Hello World</h3>
+        <p class="card-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </div></div>
+	   <div class="col-xs-12 col-sm-4">
+    <div class="card">
+      <img class="card-image" src="https://images.unsplash.com/photo-1547744037-b80bdba1b6f0" />
+      <div class="card-body">
+        <h3 class="card-title">Hello World</h3>
+        <p class="card-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </div></div>
+	<div class="col-xs-12 col-sm-4">
+    <div class="card">
+      <img class="card-image" src="https://images.unsplash.com/photo-1548772981-2fded21624d9" />
+      <div class="card-body">
+        <h3 class="card-title">Card 2</h3>
+        <p class="card-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </div></div>
+	<div class="col-xs-12 col-sm-4">
+	<div class="card">
+      <img class="card-image" src="https://images.unsplash.com/photo-1547744037-b80bdba1b6f0" />
+      <div class="card-body">
+        <h3 class="card-title">Hello World</h3>
+        <p class="card-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </div></div>
+    </div></div>
+
+    <div class="row">
+      <div class="col-xs-12 text-center">
+        <button id="js-loadmore" class="collapsible">READ MORE</button>
+		<button id="js-loadmore1" class="collapsible">Hide details</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+	
+<script>	
+	$( document ).ready(function () {
+  $(".loadmore .card").slice(0, 3).show();
+    if ($(".loadmore .card:hidden").length != 0) {
+	$("#js-loadmore1").fadeOut('fast');
+      $("#js-loadmore").show();
+    }   
+    $("#js-loadmore").on('click', function (e) {
+      e.preventDefault();
+      $(".loadmore .card:hidden").slice(0, 3).slideDown();
+      if ($(".loadmore .card:hidden").length == 0) {
+        $("#js-loadmore").fadeOut('fast');
+		$("#js-loadmore1").show();
+		$(".loadmore .card:hidden").slice(0, 3).slideUp();
+      }
+    });
+  });
+	</script>
+
+</div>
+	
+<div id="mainpage3">
+	<div>
+			 <h1 id="textbuild">Build and Boost your great profile</h1>
+	</div>
+	<div id="textbuild2">
+			 <h4>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea.</h4>
+			 
+	</div>
+	<div>
+	<button type="button" class="buttonget"><span class="button3textget">Get Started</span></button></div>
+	<div class="image_girl1">
+			 <img alt="" src="images/Rectangle 527.png" ALIGN="right">
+	</div>
+</div>
+
+<div id="mainpage4">
+	
+<section id="testim" class="testim">
+
+<!--         <div class="testim-cover"> -->
+            <div class="wrap">
+
+                <span id="right-arrow" class="arrow right fa fa-chevron-right"></span>
+                <span id="left-arrow" class="arrow left fa fa-chevron-left "></span>
+                <ul id="testim-dots" class="dots">
+                    <li class="dot active"></li><!--
+                    --><li class="dot"></li><!--
+                    --><li class="dot"></li><!--
+                    --><li class="dot"></li><!--
+                    --><li class="dot"></li>
+                </ul>
+                <div id="testim-content" class="cont">
+                    
+                    <div class="active">
+                        <div class="img"><img src="https://image.ibb.co/hgy1M7/5a6f718346a28820008b4611_750_562.jpg" alt=""></div>
+                        <h2>Lorem P. Ipsum</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>                    
+                    </div>
+
+                    <div>
+                        <div class="img"><img src="https://image.ibb.co/cNP817/pexels_photo_220453.jpg" alt=""></div>
+                        <h2>Mr. Lorem Ipsum</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>                    
+                    </div>
+
+                    <div>
+                        <div class="img"><img src="https://image.ibb.co/iN3qES/pexels_photo_324658.jpg" alt=""></div>
+                        <h2>Lorem Ipsum</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>                    
+                    </div>
+
+                    <div>
+                        <div class="img"><img src="https://image.ibb.co/kL6AES/Top_SA_Nicky_Oppenheimer.jpg" alt=""></div>
+                        <h2>Lorem De Ipsum</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>                    
+                    </div>
+
+                    <div>
+                        <div class="img"><img src="https://image.ibb.co/gUPag7/image.jpg" alt=""></div>
+                        <h2>Ms. Lorem R. Ipsum</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>                    
+                    </div>
+
+                </div>
+
+            </div>
+<!--         </div> -->
+    </section>
+
+<script src="https://use.fontawesome.com/1744f3f671.js"></script>
+</div>
+<script>
+// vars
+'use strict'
+var	testim = document.getElementById("testim"),
+		testimDots = Array.prototype.slice.call(document.getElementById("testim-dots").children),
+    testimContent = Array.prototype.slice.call(document.getElementById("testim-content").children),
+    testimLeftArrow = document.getElementById("left-arrow"),
+    testimRightArrow = document.getElementById("right-arrow"),
+    testimSpeed = 4500,
+    currentSlide = 0,
+    currentActive = 0,
+    testimTimer,
+		touchStartPos,
+		touchEndPos,
+		touchPosDiff,
+		ignoreTouch = 30;
+;
+
+window.onload = function() {
+
+    // Testim Script
+    function playSlide(slide) {
+        for (var k = 0; k < testimDots.length; k++) {
+            testimContent[k].classList.remove("active");
+            testimContent[k].classList.remove("inactive");
+            testimDots[k].classList.remove("active");
+        }
+
+        if (slide < 0) {
+            slide = currentSlide = testimContent.length-1;
+        }
+
+        if (slide > testimContent.length - 1) {
+            slide = currentSlide = 0;
+        }
+
+        if (currentActive != currentSlide) {
+            testimContent[currentActive].classList.add("inactive");            
+        }
+        testimContent[slide].classList.add("active");
+        testimDots[slide].classList.add("active");
+
+        currentActive = currentSlide;
+    
+        clearTimeout(testimTimer);
+        testimTimer = setTimeout(function() {
+            playSlide(currentSlide += 1);
+        }, testimSpeed)
+    }
+
+    testimLeftArrow.addEventListener("click", function() {
+        playSlide(currentSlide -= 1);
+    })
+
+    testimRightArrow.addEventListener("click", function() {
+        playSlide(currentSlide += 1);
+    })    
+
+    for (var l = 0; l < testimDots.length; l++) {
+        testimDots[l].addEventListener("click", function() {
+            playSlide(currentSlide = testimDots.indexOf(this));
+        })
+    }
+
+    playSlide(currentSlide);
+
+    // keyboard shortcuts
+    document.addEventListener("keyup", function(e) {
+        switch (e.keyCode) {
+            case 37:
+                testimLeftArrow.click();
+                break;
+                
+            case 39:
+                testimRightArrow.click();
+                break;
+
+            case 39:
+                testimRightArrow.click();
+                break;
+
+            default:
+                break;
+        }
+    })
+		
+		testim.addEventListener("touchstart", function(e) {
+				touchStartPos = e.changedTouches[0].clientX;
+		})
+	
+		testim.addEventListener("touchend", function(e) {
+				touchEndPos = e.changedTouches[0].clientX;
+			
+				touchPosDiff = touchStartPos - touchEndPos;
+			
+				console.log(touchPosDiff);
+				console.log(touchStartPos);	
+				console.log(touchEndPos);	
+
+			
+				if (touchPosDiff > 0 + ignoreTouch) {
+						testimLeftArrow.click();
+				} else if (touchPosDiff < 0 - ignoreTouch) {
+						testimRightArrow.click();
+				} else {
+					return;
+				}
+			
+		})
+}
+</script>
+<div id="mainpage5">
+<div class="background">
+  <div class="card1">
+   
+    <div class="card__heading">
+      <h2>Subscribe</h2>
+      <p>Stay up to date with all the news from our blog and also recive a free e-book.</p>
+    </div>
+    <form class="card__form">
+      <input type="text" class="form__input">
+      <button type="submit" class="form__submit"><i class="fas fa-check"></i></button>
+    </form>
+  </div>
+</div>
+</div>	
+  <!-- Site footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6>About</h6>
+            <p class="text-justify">Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative  to help the upcoming programmers with the code. Scanfcode focuses on providing the most efficient code or snippets as the code wants to be simple. We will help programmers build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm.</p>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Categories</h6>
+            <ul class="footer-links">
+              <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
+              <li><a href="http://scanfcode.com/category/front-end-development/">UI Design</a></li>
+              <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
+              <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
+              <li><a href="http://scanfcode.com/category/android/">Android</a></li>
+              <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
+            </ul>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Quick Links</h6>
+            <ul class="footer-links">
+              <li><a href="http://scanfcode.com/about/">About Us</a></li>
+              <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+              <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
+              <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
+              <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by 
+         <a href="#">Scanfcode</a>.
+            </p>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+              <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+            </ul>
+          </div>
+        </div>
+      </div>
+</footer>
+  </body>
+</html>
